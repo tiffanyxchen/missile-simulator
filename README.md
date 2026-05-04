@@ -4,6 +4,10 @@ This project simulates missile-target interception using **Proportional
 Navigation (PN)** guidance in C++, with Python-based trajectory
 visualization.
 
+## 🎥 Demo
+
+![Simulation](demo.gif)
+
 ## 📂 Project Structure
 
     missile-sim/
