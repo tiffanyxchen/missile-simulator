@@ -1,0 +1,14 @@
+# Compiled files
+*.o
+*.out
+main
+
+# Mac junk
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Large outputs
+output/gifs/
