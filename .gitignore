@@ -1,3 +1,6 @@
+echo "mc_xnt" >> .gitignore
+echo "xnt_t" >> .gitignore
+
 # Compiled files
 *.o
 *.out
