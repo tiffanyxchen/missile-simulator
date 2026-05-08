@@ -40,13 +40,15 @@ Trajectory run_simulation(const Params& p){
 	double spdM  = p.VM ;
 	double spdT  = p.VT ;
 	double XNP   = p.XNP;
-	double XNT   = p.XNT;
+	double XNT_c = p.XNT;
+    double XNT_t = p.XNT_start_t ;
 	double HE    = p.HEDEG / 57.3;
 
 	Vec2 RM = {0.0    , 10000.0};
 	Vec2 RT = {40000.0, 10000.0};
 
 	double BETA = M_PI;
+    double XNT  = 0.0 ;
 	double T    = 0.0 ;
 	
 	// calculations:
@@ -87,6 +89,9 @@ Trajectory run_simulation(const Params& p){
         double  BETAOLD = BETA;
         
         // Target motion w XNT normal to VT so find d/dt(BETA) first, then integrate and update BETA, find VT, new. Integrate for positions.
+        if (T >= XNT_t) {
+            XNT = XNT_c;
+        }
         double  BETAD   = XNT / spdT;
         BETA    += H    * BETAD;
 

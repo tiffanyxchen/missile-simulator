@@ -19,6 +19,7 @@ struct Params {
     double VT;
     double XNP;
     double XNT;
+    double XNT_start_t;
     double HEDEG;
 };
 
